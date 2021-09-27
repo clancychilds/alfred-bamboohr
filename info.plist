@@ -7,7 +7,31 @@
 	<key>category</key>
 	<string>Tools</string>
 	<key>connections</key>
-	<dict/>
+	<dict>
+		<key>0D389751-3E06-47AF-A461-9A44FF8130F7</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>A5E3B462-9B56-4834-B92A-DC535752A52E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>E1CE4717-9155-49DE-9CD0-CD9DEA4260F8</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
 	<key>createdby</key>
 	<string>Clancy Childs</string>
 	<key>description</key>
@@ -67,6 +91,46 @@
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string>{query}</string>
+				<key>utf8</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>A5E3B462-9B56-4834-B92A-DC535752A52E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string></string>
+				<key>title</key>
+				<string>{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>E1CE4717-9155-49DE-9CD0-CD9DEA4260F8</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
@@ -78,6 +142,20 @@
 			<integer>135</integer>
 			<key>ypos</key>
 			<integer>135</integer>
+		</dict>
+		<key>A5E3B462-9B56-4834-B92A-DC535752A52E</key>
+		<dict>
+			<key>xpos</key>
+			<integer>380</integer>
+			<key>ypos</key>
+			<integer>165</integer>
+		</dict>
+		<key>E1CE4717-9155-49DE-9CD0-CD9DEA4260F8</key>
+		<dict>
+			<key>xpos</key>
+			<integer>295</integer>
+			<key>ypos</key>
+			<integer>315</integer>
 		</dict>
 	</dict>
 	<key>webaddress</key>
