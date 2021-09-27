@@ -11,7 +11,8 @@ load_dotenv()
 
 def main(wf):
     api_key = os.environ.get('apiKey')
-    url = 'https://api.bamboohr.com/api/gateway.php/signalai/v1/employees/directory'
+    org_name = os.environ.get('orgName')
+    url = f"https://api.bamboohr.com/api/gateway.php/{org_name}/v1/employees/directory"
     headers = {'Accept': 'application/json'}
     r = requests.get(url, headers=headers, auth=(api_key, 'x'))
     wf.logger.debug(r.json())
