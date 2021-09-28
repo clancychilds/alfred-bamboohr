@@ -4,15 +4,16 @@ from workflow import Workflow3
 from workflow.util import set_config
 import requests
 import sys
-from dotenv import load_dotenv
 import os
 
-load_dotenv()
+# uncomment the below if you want to use a .env file for subdomain and apiKey
+#from dotenv import load_dotenv
+#load_dotenv()
 
 def fetchEmployees():
     api_key = os.environ.get('apiKey')
-    org_name = os.environ.get('orgName')
-    url = f"https://api.bamboohr.com/api/gateway.php/{org_name}/v1/employees/directory"
+    subdomain = os.environ.get('subdomain')
+    url = f"https://api.bamboohr.com/api/gateway.php/{subdomain}/v1/employees/directory"
     headers = {'Accept': 'application/json'}
     r = requests.get(url, headers=headers, auth=(api_key, 'x'))
     return(r.json()['employees'])
