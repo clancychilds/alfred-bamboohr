@@ -24,7 +24,7 @@ def main(wf):
     #map(lambda x: wf.add_item(x['displayName']), employees)
     for employee in employees:
         wf.add_item(employee['displayName'], subtitle=f"{employee['jobTitle']} ({employee['department']}) - {employee['workEmail']}",
-                    copytext=employee['workEmail'], quicklookurl=employee['photoUrl'], arg=employee['photoUrl'],
+                    copytext=f"{employee['displayName']} <{employee['workEmail']}>", quicklookurl=employee['photoUrl'], arg=employee['photoUrl'],
                     valid=True)
     wf.send_feedback()
     
