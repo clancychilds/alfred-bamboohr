@@ -102,7 +102,26 @@
 		</dict>
 	</array>
 	<key>readme</key>
-	<string></string>
+	<string>Alfred BambooHR Directory Lookup
+by Clancy Childs
+https://github.com/clancychilds/alfred-bamboohr
+
+This workflow allows you to search the BambooHR directory for an employee by their name (first or last).
+
+When you select the resulting employee record, it will download a photo of the employee (Hopefully this will be fixed in a coming version to just display the photo rather than download it. It is a bug with BambooHR.)
+If you press ⌘+C on a selection, it will copy the user's name and email address to the clipboard.
+
+The API response is cached for 24 hours, so it might not always have someone who has joined the org in the past day.
+
+Setup:
+You must correctly input the following two Workflow Environment Variables into the workflow's settings panel:
+
+	subdomain: The subdomain used to access your account (If you 	access BambooHR at https://mycompany.bamboohr.com, then the 	subdomain is "mycompany")
+
+	apiKey: To generate an API key, users should log in and click 	their name in the upper right-hand corner of any page to get 	to the user context menu. If they have sufficient permissions, 	there will be an "API Keys" option in that menu to go to the 	page.
+
+Usage:
+Trigger Alfred and enter `bamboo` followed by the beginning of a first or last name that you are searching for.</string>
 	<key>uidata</key>
 	<dict>
 		<key>0D389751-3E06-47AF-A461-9A44FF8130F7</key>
@@ -120,6 +139,20 @@
 			<integer>165</integer>
 		</dict>
 	</dict>
+	<key>variables</key>
+	<dict>
+		<key>apiKey</key>
+		<string></string>
+		<key>subdomain</key>
+		<string></string>
+	</dict>
+	<key>variablesdontexport</key>
+	<array>
+		<string>apiKey</string>
+		<string>subdomain</string>
+	</array>
+	<key>version</key>
+	<string>1.0</string>
 	<key>webaddress</key>
 	<string>https://github.com/clancychilds/alfred-bamboohr</string>
 </dict>
